@@ -74,7 +74,7 @@ body {
   box-shadow: 8px 8px 15px 5px #888888;
 }
 
-#topleft {
+#greenquad {
   position: absolute;
   height: 250px;
   width: 250px;
@@ -92,7 +92,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#topright {
+#redquad {
   position: absolute;
   height: 250px;
   width: 250px;
@@ -110,7 +110,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#bottomleft {
+#yellowquad {
   position: absolute;
   height: 250px;
   width: 250px;
@@ -128,7 +128,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#bottomright {
+#bluequad {
   position: absolute;
   height: 250px;
   width: 250px;
