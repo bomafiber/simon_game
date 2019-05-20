@@ -6,7 +6,7 @@ let strictMode = false;
 let power = false;
 let sound = true;
 let winTheGame;
-let userTurn = document.querySelector("#playerturn");
+let userTurn;
 let intervalId;
 let buttonFlash;
 let goodPlay
@@ -28,10 +28,10 @@ const yellowquadrant = document.querySelector("#yellowquad");
 powerOn.addEventListener('click', (event) => {
   if (powerOn.click == true) {
     power = true
-    userTurn.innerHTML = "_";
+    countTurn.innerHTML = "_";
 
   }else {
     power = false
-    userTurn.innerHTML = "";
+    countTurn.innerHTML = "";
   }
 });
