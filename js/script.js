@@ -13,6 +13,7 @@ let goodPlay
 let compTurn;
 
 
+
 const countTurn = document.querySelector("#playerturn");
 const powerOn = document.querySelector("#power");
 const startButton = document.querySelector("#start");
@@ -26,11 +27,11 @@ const yellowquadrant = document.querySelector("#yellowquad");
 
 powerOn.addEventListener('click', (event) => {
   if (powerOn.click == true) {
-    powerOn == true
+    power = true
     userTurn.innerHTML = "_";
 
   }else {
-    powerOn == false
+    power = false
     userTurn.innerHTML = "";
   }
 });
