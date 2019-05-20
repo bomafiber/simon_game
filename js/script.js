@@ -29,7 +29,7 @@ powerOn.addEventListener('click', (event) => {
     console.log('It is on!')
 
   }else {
-    powerOn = false;
+    powerOn == false
     userTurn.innerHTML = "";
   }
 });
