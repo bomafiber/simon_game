@@ -26,7 +26,7 @@ const yellowquadrant = document.querySelector("#yellowquad");
 // start the GAME
 
 powerOn.addEventListener('click', (event) => {
-  if (powerOn.click == true) {
+  if (powerOn.checked == true) {
     power = true
     countTurn.innerHTML = "_";
 
