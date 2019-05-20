@@ -26,7 +26,8 @@ const yellowquadrant = document.querySelector("#yellowquad");
 
 powerOn.addEventListener('click', (event) => {
   if (powerOn.click == true) {
-    console.log('It is on!')
+    powerOn == true
+    userTurn.innerHTML = "_";
 
   }else {
     powerOn == false
