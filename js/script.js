@@ -69,6 +69,9 @@ function playGame () {
   intervalId = setInterval(flashColors, 800);
 };
 
+greenquad.addEventListener(click, (event) => {
+  
+});
 
 // function flashColors() {
 //   powerOn = false;

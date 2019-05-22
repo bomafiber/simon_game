@@ -11,6 +11,7 @@ body {
   border-radius: 50% !important;
   font-size: 1.5em;
   background-color: lightgray;
+  cursor: pointer;
 }
 
 #switches {
@@ -90,6 +91,7 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
 }
 
 #redquad {
