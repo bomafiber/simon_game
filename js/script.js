@@ -6,6 +6,7 @@ let strictMode = false;
 let power = false;
 let sound = true;
 let winTheGame;
+let loseTheGame;
 let playerTurn;
 let intervalId;
 let quadFlash;
@@ -66,20 +67,32 @@ function playGame () {
   }
   compTurn = true;
   intervalId = setInterval(flashColors, 800);
-}
+};
 
-function flashColors() {
-  powerOn = false;
 
-  if (quadFlash == countTurn) {
-    clearInterval(intervalId);
-    compSeq = false;
-    clearFlash();
-    powerOn = true;
-  }
+// function flashColors() {
+//   powerOn = false;
+//
+//   if (quadFlash == countTurn) {
+//     clearInterval(intervalId);
+//     compSeq = false;
+//     clearFlash();
+//     powerOn = true;
+//   }
+//
+//   if (compTurn) {
+//     clearFlash();
+//
+//   }
+// }
 
-  if (compTurn) {
-    clearFlash();
-
-  }
-}
+// function playerButtonPresses {
+//
+// if (userSeq == compSeq){
+// 	return compSeq + 1
+//
+//     } else {
+//       goodPlay = false
+//       winTheGame = false
+//      }
+// };
