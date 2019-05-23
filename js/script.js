@@ -12,7 +12,7 @@ let intervalId;
 let quadFlash;
 let goodPlay
 let compTurn;
-let clearFlash;
+// let clearFlash;
 
 
 
@@ -25,6 +25,7 @@ const redquadrant = document.querySelector("#redquad");
 const bluequadrant = document.querySelector("#bluequad");
 const yellowquadrant = document.querySelector("#yellowquad");
 
+
 // Click the power button to activate the game
 
 powerOn.addEventListener('click', (event) => {
@@ -35,7 +36,7 @@ powerOn.addEventListener('click', (event) => {
   }else {
     power = false
     countTurn.innerHTML = "";
-    clearFlash();
+    // clearFlash();
     clearInterval(intervalId);
   }
 });
@@ -69,33 +70,46 @@ function playGame () {
   intervalId = setInterval(flashColors, 800);
 };
 
-greenquad.addEventListener(click, (event) => {
-  
+
+
+function flashColors() {
+  power = false;
+
+  if (quadFlash == countTurn) {
+    clearInterval(intervalId);
+    compSeq = false;
+    // clearFlash();
+    powerOn = true;
+  }
+
+  if (compTurn) {
+    // clearFlash();
+
+  }
+};
+
+
+// sound created with each quad pad press
+var audio1 = new Audio();
+audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
+greenquad.addEventListener('click', (event) => {
+  audio1.play()
 });
 
-// function flashColors() {
-//   powerOn = false;
-//
-//   if (quadFlash == countTurn) {
-//     clearInterval(intervalId);
-//     compSeq = false;
-//     clearFlash();
-//     powerOn = true;
-//   }
-//
-//   if (compTurn) {
-//     clearFlash();
-//
-//   }
-// }
+var audio2 = new Audio();
+audio2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
+redquad.addEventListener('click', (event) => {
+  audio2.play();
+});
 
-// function playerButtonPresses {
-//
-// if (userSeq == compSeq){
-// 	return compSeq + 1
-//
-//     } else {
-//       goodPlay = false
-//       winTheGame = false
-//      }
-// };
+var audio3 = new Audio();
+audio3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
+bluequad.addEventListener('click', (event) => {
+  audio3.play()
+});
+
+var audio4 = new Audio();
+audio4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
+yellowquad.addEventListener('click', (event) => {
+  audio4.play()
+});
