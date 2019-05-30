@@ -7,11 +7,12 @@ let powerSelection = false;
 let sound = false;
 let winTheGame;
 let loseTheGame;
-let playerTurn;
+let round = 1;
 let intervalId;
 let quadFlash;
 let goodPlay
 let compTurn;
+let startGame = false;
 
 // let clearFlash;
 
@@ -25,7 +26,7 @@ const greenquadrant = document.querySelector("#greenquad");
 const redquadrant = document.querySelector("#redquad");
 const bluequadrant = document.querySelector("#bluequad");
 const yellowquadrant = document.querySelector("#yellowquad");
-
+const maxRound = 20;
 
 // Click the power button to activate the game
 
@@ -49,16 +50,17 @@ powerOn.addEventListener('click', (event) => {
 
 // Click the start button to start the game
 startButton.addEventListener('click', (event) => {
-  if (powerSelection || winTheGame) {
+  if (powerSelection == true) {
     playGame();
-  }else {
-    alert("Select the Power checkbox")
+    compPlay();
   }
 });
 
+
+// Enable strict button to start strict mode.
 strictOn.addEventListener('click',(event) => {
   if(strictOn.checked == true){
-    strict = true;
+    strictMode = true;
     strictPlay();
   }
 });
@@ -68,7 +70,6 @@ strictOn.addEventListener('click',(event) => {
 function playGame () {
 // reset variables
   winTheGame = false;
-  compSeq = [];
   userSeq = [];
   sound = true;
   intervalId = 0;
@@ -77,30 +78,32 @@ function playGame () {
   countTurn.innerHTML = 1;
   goodPlay = true;
 
-// Generate a set of random button presses
-  for (var i = 0; i < 20; i++) {
-    compSeq.push(Math.floor(Math.random() * 4) + 1);
-  }
-  compTurn = true;
-  intervalId = setInterval(flashColors, 800);
+  compPlay();
+  intervalId = setInterval(flashColors,800);
+
 };
 
 
-
+// Change colors of quads when clicked.
 function flashColors() {
-  power = false;
+  redquadrant.style.backgroundColor = "redlite";
+  greenquadrant.style.backgroundColor = "greenlite";
+  bluequadrant.style.backgroundColor = "bluelite";
+  yellowquadrant.style.backgroundColor = "yellowlite";
 
-  if (quadFlash == countTurn) {
-    clearInterval(intervalId);
-    compSeq = false;
-    // clearFlash();
-    powerOn = true;
-  }
+};
 
-  if (compTurn) {
-    // clearFlash();
 
-  }
+function compPlay() {
+  powerSelection = true;
+  winTheGame = false;
+  strictOn = false;
+  compSeq = [];
+
+  // Generate a set of random button presses
+    for (var i = 0; i < 20; i++) {
+      compSeq.push(Math.floor(Math.random() * 4) + 1);
+    }
 };
 
 

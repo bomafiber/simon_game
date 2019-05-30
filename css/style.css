@@ -94,6 +94,10 @@ body {
 
 }
 
+.greenlite{
+  background-color:#bbf1c2;
+}
+
 #redquad {
   position: absolute;
   height: 250px;
@@ -110,6 +114,10 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.redlite {
+  background-color: #f2bcbd
 }
 
 #yellowquad {
@@ -130,6 +138,10 @@ body {
   -webkit-box-sizing: border-box;
 }
 
+.yellowlite {
+  background-color: #f0e7ba
+}
+
 #bluequad {
   position: absolute;
   height: 250px;
@@ -146,6 +158,10 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.bluelite {
+  background-color: #b9e4ef
 }
 
 #inner-circle {
