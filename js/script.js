@@ -4,7 +4,7 @@ let userSeq = [];
 let compSeq = [];
 let strictMode = false;
 let power = false;
-let sound = true;
+let sound = false;
 let winTheGame;
 let loseTheGame;
 let playerTurn;
@@ -45,6 +45,13 @@ powerOn.addEventListener('click', (event) => {
 startButton.addEventListener('click', (event) => {
   if (powerOn || winTheGame) {
     playGame();
+  }
+});
+
+strictOn.addEventListener('click',(event) => {
+  if(strictOn.checked == true){
+    strict = true;
+    strictPlay();
   }
 });
 
@@ -93,23 +100,31 @@ function flashColors() {
 var audio1 = new Audio();
 audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
 greenquad.addEventListener('click', (event) => {
-  audio1.play()
+  if (sound){
+    audio1.play()
+  }
 });
 
 var audio2 = new Audio();
 audio2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
 redquad.addEventListener('click', (event) => {
-  audio2.play();
+  if(sound){
+    audio2.play();
+  }
 });
 
 var audio3 = new Audio();
 audio3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
 bluequad.addEventListener('click', (event) => {
-  audio3.play()
+  if (sound){
+    audio3.play()
+  }
 });
 
 var audio4 = new Audio();
 audio4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
 yellowquad.addEventListener('click', (event) => {
-  audio4.play()
+  if (sound) {
+    audio4.play()
+  }
 });
