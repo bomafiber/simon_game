@@ -3,7 +3,7 @@
 let userSeq = [];
 let compSeq = [];
 let strictMode = false;
-let power = false;
+let powerSelection = false;
 let sound = false;
 let winTheGame;
 let loseTheGame;
@@ -12,6 +12,7 @@ let intervalId;
 let quadFlash;
 let goodPlay
 let compTurn;
+
 // let clearFlash;
 
 
@@ -30,21 +31,28 @@ const yellowquadrant = document.querySelector("#yellowquad");
 
 powerOn.addEventListener('click', (event) => {
   if (powerOn.checked == true) {
-    power = true
+    powerSelection = true
     countTurn.innerHTML = "--";
+    startButton.disabled = false;
+    strictOn.disabled = false
 
   }else {
-    power = false
+    powerSelection = false
+    startButton.disabled = true;
+    strictOn.disabled = true;
     countTurn.innerHTML = "";
     // clearFlash();
     clearInterval(intervalId);
+    strictOn.checked = false;
   }
 });
 
 // Click the start button to start the game
 startButton.addEventListener('click', (event) => {
-  if (powerOn || winTheGame) {
+  if (powerSelection || winTheGame) {
     playGame();
+  }else {
+    alert("Select the Power checkbox")
   }
 });
 
