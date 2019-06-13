@@ -139,7 +139,7 @@ function clickGreen(){
     audio1.play()
   }
   greenquadrant.classList.add("greenlite")
-  setTimeout(function ()){
+  setTimeout(function (){
     greenquadrant.classList.remove("greenlite")
   },500);
 }
@@ -149,7 +149,7 @@ function clickRed(){
     audio2.play()
   }
   redquadrant.classList.add("redlite")
-  setTimeout(function ()){
+  setTimeout(function (){
     redquadrant.classList.remove("redlite")
   },500);
 }
@@ -159,7 +159,7 @@ function clickBlue(){
     audio3.play()
   }
   bluequadrant.classList.add("bluelite")
-  setTimeout(function ()){
+  setTimeout(function (){
     bluequadrant.classList.remove("bluelite")
   },500);
 }
@@ -169,7 +169,7 @@ function clickYellow(){
     audio4.play()
   }
   yellowquadrant.classList.add("yellowlite")
-  setTimeout(function ()){
+  setTimeout(function (){
     yellowquadrant.classList.remove("yellowlite")
   },500);
 }
