@@ -129,3 +129,47 @@ yellowquad.addEventListener('click', (event) => {
     userplay(4);
   }
 });
+
+
+
+//Play the sounds and flash colors.
+
+function clickGreen(){
+  if(sound){
+    audio1.play()
+  }
+  greenquadrant.classList.add("greenlite")
+  setTimeout(function ()){
+    greenquadrant.classList.remove("greenlite")
+  },500);
+}
+
+function clickRed(){
+  if(sound){
+    audio2.play()
+  }
+  redquadrant.classList.add("redlite")
+  setTimeout(function ()){
+    redquadrant.classList.remove("redlite")
+  },500);
+}
+
+function clickBlue(){
+  if(sound){
+    audio3.play()
+  }
+  bluequadrant.classList.add("bluelite")
+  setTimeout(function ()){
+    bluequadrant.classList.remove("bluelite")
+  },500);
+}
+
+function clickYellow(){
+  if(sound){
+    audio4.play()
+  }
+  yellowquadrant.classList.add("yellowlite")
+  setTimeout(function ()){
+    yellowquadrant.classList.remove("yellowlite")
+  },500);
+}
