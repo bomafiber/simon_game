@@ -89,24 +89,24 @@ function compPlay() {
   winTheGame = false;
 
   if(compSeq.length < round) {
-    compSeq.push(Math.floor(Math.random() * 4) +1 );
+    compSeq.push(Math.floor(Math.random() * 4) + 1);
   }
 
   // Generate a set of random button presses
     for (var i = 0; i < compSeq.length; i++) {
-      var currentPlay = compPlay[i];
+      var currentPlay = compSeq[i];
       if (currentPlay == 1) {
         clickGreen();
-        setTimeout(function(){clickGreen();},2000);
+        setTimeout(function() { clickGreen();}, 2000);
       }
       if(currentPlay == 2 ){
-        setTimeout(function() {clickRed(); }, 2000);
+        setTimeout(function() { clickRed();}, 2000);
       }
       if(currentPlay == 3 ){
-        setTimeout(function() {clickBlue(); }, 2000);
+        setTimeout(function() { clickBlue();}, 2000);
     }
     if(currentPlay == 4 ){
-      setTimeout(function() {clickYellow(); }, 2000);
+      setTimeout(function() { clickYellow();}, 2000);
     }
   }
 };
@@ -135,7 +135,7 @@ function userplay(quads) {
        userSeq = [];
        round ++
 
-       setTimeout(function () {compPlay();},1000);
+       setTimeout(function() { compPlay();}, 1000);
      }else {
        userSeq = [];
      }
