@@ -112,6 +112,37 @@ function compPlay() {
 };
 
 
+function userplay(quads) {
+  var userTurn = userSeq.length
+
+  if (userTurn < round) {
+
+    if (compSeq[userTurn] == quads && round == 20) {
+      counter.innerHTML == "WIN"
+    }
+      userSeq.push(quads);
+  }
+   var userResult = true;
+   if(userSeq.length == round) {
+     for (var i = 0; i < round ; i++) {
+       if (userSeq[i] != compSeq[i]){
+         userResult = false;
+         break;
+       }
+     }
+
+     if (userResult){
+       userSeq = [];
+       round ++
+
+       setTimeout(function () {compPlay();},1000);
+     }else {
+       userSeq = [];
+     }
+   }
+}
+
+
 // sound created with each quad pad press
 var audio1 = new Audio();
 audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
