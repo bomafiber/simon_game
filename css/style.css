@@ -95,7 +95,7 @@ body {
 }
 
 .greenlite{
-  background-color:#bbf1c2;
+  background: lightgreen !important;
 }
 
 #redquad {
@@ -117,7 +117,7 @@ body {
 }
 
 .redlite {
-  background-color: #f2bcbd
+  background: tomato !important;
 }
 
 #yellowquad {
@@ -139,7 +139,7 @@ body {
 }
 
 .yellowlite {
-  background-color: #f0e7ba
+  background:#fff099 !important;
 }
 
 #bluequad {
@@ -161,7 +161,7 @@ body {
 }
 
 .bluelite {
-  background-color: #b9e4ef
+  background: lightblue !important;
 }
 
 #inner-circle {

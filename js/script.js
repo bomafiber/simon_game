@@ -14,9 +14,6 @@ let goodPlay
 let compTurn;
 let startGame = false;
 
-// let clearFlash;
-
-
 
 const countTurn = document.querySelector("#playerturn");
 const powerOn = document.querySelector("#power");
@@ -51,9 +48,8 @@ powerOn.addEventListener('click', (event) => {
 // Click the start button to start the game
 startButton.addEventListener('click', (event) => {
   if (powerSelection == true) {
-    playGame();
-    compPlay();
-  }
+    playNewGame();
+    }
 });
 
 
@@ -67,7 +63,7 @@ strictOn.addEventListener('click',(event) => {
 
 
 // Function to play the game
-function playGame () {
+function playNewGame () {
 // reset variables
   winTheGame = false;
   userSeq = [];
@@ -77,19 +73,9 @@ function playGame () {
   playTurn = 1;
   countTurn.innerHTML = 1;
   goodPlay = true;
-
+  startGame = true;
   compPlay();
-  intervalId = setInterval(flashColors,800);
-
-};
-
-
-// Change colors of quads when clicked.
-function flashColors() {
-  redquadrant.style.backgroundColor = "redlite";
-  greenquadrant.style.backgroundColor = "greenlite";
-  bluequadrant.style.backgroundColor = "bluelite";
-  yellowquadrant.style.backgroundColor = "yellowlite";
+  //intervalId = setInterval(flashColors,800);
 
 };
 
@@ -111,31 +97,35 @@ function compPlay() {
 var audio1 = new Audio();
 audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
 greenquad.addEventListener('click', (event) => {
-  if (sound){
-    audio1.play()
+  if (startGame && powerSelection){
+    clickGreen();
+    userplay(1)
   }
 });
 
 var audio2 = new Audio();
 audio2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
 redquad.addEventListener('click', (event) => {
-  if(sound){
-    audio2.play();
+  if(startGame && powerSelection){
+    clickRed();
+    userplay(2);
   }
 });
 
 var audio3 = new Audio();
 audio3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
 bluequad.addEventListener('click', (event) => {
-  if (sound){
-    audio3.play()
+  if (startGame && powerSelection){
+    clickBlue();
+    userplay(3);
   }
 });
 
 var audio4 = new Audio();
 audio4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
 yellowquad.addEventListener('click', (event) => {
-  if (sound) {
-    audio4.play()
+  if (startGame && powerSelection) {
+    clickYellow();
+    userplay(4);
   }
 });
