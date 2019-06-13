@@ -80,16 +80,35 @@ function playNewGame () {
 };
 
 
+
+
 function compPlay() {
+
+  countTurn.innerHTML = round;
   powerSelection = true;
   winTheGame = false;
-  strictOn = false;
-  compSeq = [];
+
+  if(compSeq.length < round) {
+    compSeq.push(Math.floor(Math.random() * 4) +1 );
+  }
 
   // Generate a set of random button presses
-    for (var i = 0; i < 20; i++) {
-      compSeq.push(Math.floor(Math.random() * 4) + 1);
+    for (var i = 0; i < compSeq.length; i++) {
+      var currentPlay = compPlay[i];
+      if (currentPlay == 1) {
+        clickGreen();
+        setTimeout(function(){clickGreen();},2000);
+      }
+      if(currentPlay == 2 ){
+        setTimeout(function() {clickRed(); }, 2000);
+      }
+      if(currentPlay == 3 ){
+        setTimeout(function() {clickBlue(); }, 2000);
     }
+    if(currentPlay == 4 ){
+      setTimeout(function() {clickYellow(); }, 2000);
+    }
+  }
 };
 
 
