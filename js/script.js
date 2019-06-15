@@ -75,15 +75,34 @@ function playNewGame () {
   goodPlay = true;
   startGame = true;
   compPlay();
-  //intervalId = setInterval(flashColors,800);
 
 };
 
+function click(num){
+  const [audio, quad, lite] = getAttributes(num)
+  if(sound){
+    audio.play()
+  }
+  quad.classList.add(lite)
+  setTimeout(function(){
+    quad.classList.remove(lite)
+  }, 500)
+}
 
-
+function getAttributes(num){
+  switch (num) {
+    case 1:
+      return [audio1, greenquadrant, "greenlite"]
+    case 2:
+      return [audio2, redquadrant, "redlite"]
+    case 3:
+      return [audio3, bluequadrant, "bluelite"]
+    case 4:
+      return [audio4, yellowquadrant, "yellowlite"]
+  }
+}
 
 function compPlay() {
-
   countTurn.innerHTML = round;
   powerSelection = true;
   winTheGame = false;
@@ -93,25 +112,16 @@ function compPlay() {
   }
 
   // Generate a set of random button presses
-    for (var i = 0; i < compSeq.length; i++) {
-      var currentPlay = compSeq[i];
-      if (currentPlay == 1) {
-        clickGreen();
-        setTimeout(function() { clickGreen();}, 2000);
-      }
-      if(currentPlay == 2 ){
-        setTimeout(function() { clickRed();}, 2000);
-      }
-      if(currentPlay == 3 ){
-        setTimeout(function() { clickBlue();}, 2000);
-    }
-    if(currentPlay == 4 ){
-      setTimeout(function() { clickYellow();}, 2000);
-    }
+  for (let i = 0; i < compSeq.length; i++) {
+    setTimeout(function(){
+      let currentPlay = compSeq[i]
+      click(currentPlay)
+    }, i * 1000)
   }
-};
+}
 
 
+// User play function
 function userplay(quads) {
   var userTurn = userSeq.length
 
