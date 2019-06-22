@@ -28,7 +28,7 @@ const maxRound = 20;
 // Click the power button to activate the game
 
 powerOn.addEventListener('click', (event) => {
-  if (powerOn.checked == true) {
+  if (powerOn.checked === true) {
     powerSelection = true
     countTurn.innerHTML = "--";
     startButton.disabled = false;
@@ -122,22 +122,22 @@ function compPlay() {
 
 
 // User play function
-function userplay(quads) {
+function userPlay(quads) {
   var userTurn = userSeq.length
 
   if (userTurn < round) {
 
     if (compSeq[userTurn] == quads && round == 20) {
-      counter.innerHTML == "WIN"
+      countTurn.innerHTML == "WIN"
     }
-      userSeq.push(quads);
+    userSeq.push(quads);
   }
    var userResult = true;
    if(userSeq.length == round) {
      for (var i = 0; i < round ; i++) {
        if (userSeq[i] != compSeq[i]){
          userResult = false;
-         break;
+         failedAttempt();
        }
      }
 
@@ -146,20 +146,30 @@ function userplay(quads) {
        round ++
 
        setTimeout(function() { compPlay();}, 1000);
-     }else {
-       userSeq = [];
      }
    }
 }
 
+function failedAttempt() {
+  countTurn.innerHTML = "FAIL"
+  errorSound.play();
+  userSeq = [];
+  setTimeout(function() { compPlay();}, 1000);
+}
+
 
 // sound created with each quad pad press
+var errorSound = new Audio();
+errorSound.src = "http://www.pacdv.com/sounds/interface_sound_effects/sound8.mp3";
+
+
+
 var audio1 = new Audio();
 audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
 greenquad.addEventListener('click', (event) => {
   if (startGame && powerSelection){
-    clickGreen();
-    userplay(1)
+    click(1);
+    userPlay(1)
   }
 });
 
@@ -167,8 +177,8 @@ var audio2 = new Audio();
 audio2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
 redquad.addEventListener('click', (event) => {
   if(startGame && powerSelection){
-    clickRed();
-    userplay(2);
+    click(2);
+    userPlay(2);
   }
 });
 
@@ -176,8 +186,8 @@ var audio3 = new Audio();
 audio3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
 bluequad.addEventListener('click', (event) => {
   if (startGame && powerSelection){
-    clickBlue();
-    userplay(3);
+    click(3);
+    userPlay(3);
   }
 });
 
@@ -185,8 +195,8 @@ var audio4 = new Audio();
 audio4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
 yellowquad.addEventListener('click', (event) => {
   if (startGame && powerSelection) {
-    clickYellow();
-    userplay(4);
+    click(4);
+    userPlay(4);
   }
 });
 
@@ -194,42 +204,42 @@ yellowquad.addEventListener('click', (event) => {
 
 //Play the sounds and flash colors.
 
-function clickGreen(){
-  if(sound){
-    audio1.play()
-  }
-  greenquadrant.classList.add("greenlite")
-  setTimeout(function (){
-    greenquadrant.classList.remove("greenlite")
-  },500);
-}
-
-function clickRed(){
-  if(sound){
-    audio2.play()
-  }
-  redquadrant.classList.add("redlite")
-  setTimeout(function (){
-    redquadrant.classList.remove("redlite")
-  },500);
-}
-
-function clickBlue(){
-  if(sound){
-    audio3.play()
-  }
-  bluequadrant.classList.add("bluelite")
-  setTimeout(function (){
-    bluequadrant.classList.remove("bluelite")
-  },500);
-}
-
-function clickYellow(){
-  if(sound){
-    audio4.play()
-  }
-  yellowquadrant.classList.add("yellowlite")
-  setTimeout(function (){
-    yellowquadrant.classList.remove("yellowlite")
-  },500);
-}
+// function clickGreen(){
+//   if(sound){
+//     audio1.play()
+//   }
+//   greenquadrant.classList.add("greenlite")
+//   setTimeout(function (){
+//     greenquadrant.classList.remove("greenlite")
+//   },500);
+// }
+//
+// function clickRed(){
+//   if(sound){
+//     audio2.play()
+//   }
+//   redquadrant.classList.add("redlite")
+//   setTimeout(function (){
+//     redquadrant.classList.remove("redlite")
+//   },500);
+// }
+//
+// function clickBlue(){
+//   if(sound){
+//     audio3.play()
+//   }
+//   bluequadrant.classList.add("bluelite")
+//   setTimeout(function (){
+//     bluequadrant.classList.remove("bluelite")
+//   },500);
+// }
+//
+// function clickYellow(){
+//   if(sound){
+//     audio4.play()
+//   }
+//   yellowquadrant.classList.add("yellowlite")
+//   setTimeout(function (){
+//     yellowquadrant.classList.remove("yellowlite")
+//   },500);
+// }
