@@ -149,7 +149,7 @@ function userPlay(quads) {
      }
    }
 }
-
+// Function to fail user with wrong sequence
 function failedAttempt() {
   countTurn.innerHTML = "FAIL"
   errorSound.play();
