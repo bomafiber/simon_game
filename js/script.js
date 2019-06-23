@@ -9,7 +9,6 @@ let winTheGame;
 let loseTheGame;
 let round = 1;
 let intervalId;
-let quadFlash;
 let goodPlay
 let compTurn;
 let startGame = false;
@@ -67,7 +66,6 @@ winTheGame = false;
 userSeq = [];
 sound = true;
 intervalId = 0;
-quadFlash = 0;
 playTurn = 1;
 countTurn.innerHTML = 1;
 goodPlay = true;
@@ -86,7 +84,6 @@ function playNewGame () {
   userSeq = [];
   sound = true;
   intervalId = 0;
-  quadFlash = 0;
   playTurn = 1;
   countTurn.innerHTML = 1;
   goodPlay = true;
@@ -172,12 +169,13 @@ function failedAttempt() {
   countTurn.innerHTML = "FAIL"
   errorSound.play();
   userSeq = [];
-  if (strictOn.checked == true) {
-      // countTurn.innerHTML = "FAIL"
-      alert("strict play loop")
-      strictPlay()
-  } else {
 
+// Strict play button enabled feature
+  if (strictOn.checked == true) {
+      round = 1
+      compSeq.length = 0;
+      setTimeout(function() { compPlay();}, 1000);
+      } else {
     setTimeout(function() { compPlay();}, 1000);
   }
 }
