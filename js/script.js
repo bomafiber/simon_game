@@ -55,16 +55,33 @@ startButton.addEventListener('click', (event) => {
 
 // Enable strict button to start strict mode.
 strictOn.addEventListener('click',(event) => {
-  if(strictOn.checked == true){
-    strictMode = true;
+  if(strictOn.disabled = false){
     strictPlay();
   }
 });
+
+function strictPlay(){
+// playNewGame();
+// compSeq = [];
+winTheGame = false;
+userSeq = [];
+sound = true;
+intervalId = 0;
+quadFlash = 0;
+playTurn = 1;
+countTurn.innerHTML = 1;
+goodPlay = true;
+startGame = true;
+// countTurn.innerHTML = 1;
+// compPlay();
+}
+
 
 
 // Function to play the game
 function playNewGame () {
 // reset variables
+
   winTheGame = false;
   userSeq = [];
   sound = true;
@@ -103,6 +120,7 @@ function getAttributes(num){
 }
 
 function compPlay() {
+  startButton.disabled = true;
   countTurn.innerHTML = round;
   powerSelection = true;
   winTheGame = false;
@@ -111,7 +129,7 @@ function compPlay() {
     compSeq.push(Math.floor(Math.random() * 4) + 1);
   }
 
-  // Generate a set of random button presses
+// Generate a set of random button presses
   for (let i = 0; i < compSeq.length; i++) {
     setTimeout(function(){
       let currentPlay = compSeq[i]
@@ -154,15 +172,24 @@ function failedAttempt() {
   countTurn.innerHTML = "FAIL"
   errorSound.play();
   userSeq = [];
-  setTimeout(function() { compPlay();}, 1000);
+  if (strictOn.checked == true) {
+      // countTurn.innerHTML = "FAIL"
+      alert("strict play loop")
+      strictPlay()
+  } else {
+
+    setTimeout(function() { compPlay();}, 1000);
+  }
 }
+
+
+
+
 
 
 // sound created with each quad pad press
 var errorSound = new Audio();
 errorSound.src = "http://www.pacdv.com/sounds/interface_sound_effects/sound8.mp3";
-
-
 
 var audio1 = new Audio();
 audio1.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
@@ -199,47 +226,3 @@ yellowquad.addEventListener('click', (event) => {
     userPlay(4);
   }
 });
-
-
-
-//Play the sounds and flash colors.
-
-// function clickGreen(){
-//   if(sound){
-//     audio1.play()
-//   }
-//   greenquadrant.classList.add("greenlite")
-//   setTimeout(function (){
-//     greenquadrant.classList.remove("greenlite")
-//   },500);
-// }
-//
-// function clickRed(){
-//   if(sound){
-//     audio2.play()
-//   }
-//   redquadrant.classList.add("redlite")
-//   setTimeout(function (){
-//     redquadrant.classList.remove("redlite")
-//   },500);
-// }
-//
-// function clickBlue(){
-//   if(sound){
-//     audio3.play()
-//   }
-//   bluequadrant.classList.add("bluelite")
-//   setTimeout(function (){
-//     bluequadrant.classList.remove("bluelite")
-//   },500);
-// }
-//
-// function clickYellow(){
-//   if(sound){
-//     audio4.play()
-//   }
-//   yellowquadrant.classList.add("yellowlite")
-//   setTimeout(function (){
-//     yellowquadrant.classList.remove("yellowlite")
-//   },500);
-// }
