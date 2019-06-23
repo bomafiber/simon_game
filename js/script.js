@@ -164,7 +164,7 @@ function userPlay(quads) {
      }
    }
 }
-// Function to fail user with wrong sequence
+// Function to notify user when wrong sequence entered
 function failedAttempt() {
   countTurn.innerHTML = "FAIL"
   errorSound.play();
