@@ -59,19 +59,11 @@ strictOn.addEventListener('click',(event) => {
   }
 });
 
+// Strict play button enabled feature
 function strictPlay(){
-// playNewGame();
-// compSeq = [];
-winTheGame = false;
-userSeq = [];
-sound = true;
-intervalId = 0;
-playTurn = 1;
-countTurn.innerHTML = 1;
-goodPlay = true;
-startGame = true;
-// countTurn.innerHTML = 1;
-// compPlay();
+  round = 1
+  compSeq.length = 0;
+  setTimeout(function() { compPlay();}, 1800);
 }
 
 
@@ -170,13 +162,11 @@ function failedAttempt() {
   errorSound.play();
   userSeq = [];
 
-// Strict play button enabled feature
+// Failed playerturn with Strict play button enabled
   if (strictOn.checked == true) {
-      round = 1
-      compSeq.length = 0;
-      setTimeout(function() { compPlay();}, 1000);
+      strictPlay();
       } else {
-    setTimeout(function() { compPlay();}, 1000);
+    setTimeout(function() { compPlay();}, 1800);
   }
 }
 
