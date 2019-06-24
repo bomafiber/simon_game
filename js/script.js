@@ -1,4 +1,4 @@
-// declare variables
+// Global variables
 
 let userSeq = [];
 let compSeq = [];
@@ -38,7 +38,6 @@ powerOn.addEventListener('click', (event) => {
     startButton.disabled = true;
     strictOn.disabled = true;
     countTurn.innerHTML = "";
-    // clearFlash();
     clearInterval(intervalId);
     strictOn.checked = false;
   }
@@ -92,7 +91,7 @@ function click(num){
   quad.classList.add(lite)
   setTimeout(function(){
     quad.classList.remove(lite)
-  }, 500)
+  }, 800)
 }
 
 function getAttributes(num){
@@ -108,6 +107,7 @@ function getAttributes(num){
   }
 }
 
+// Computer play function when to start game.
 function compPlay() {
   startButton.disabled = true;
   countTurn.innerHTML = round;
@@ -123,7 +123,7 @@ function compPlay() {
     setTimeout(function(){
       let currentPlay = compSeq[i]
       click(currentPlay)
-    }, i * 1000)
+    }, i * 1200)
   }
 }
 
@@ -136,6 +136,7 @@ function userPlay(quads) {
 
     if (compSeq[userTurn] == quads && round == 20) {
       countTurn.innerHTML == "WIN"
+
     }
     userSeq.push(quads);
   }
@@ -156,6 +157,8 @@ function userPlay(quads) {
      }
    }
 }
+
+
 // Function to notify user when wrong sequence entered
 function failedAttempt() {
   countTurn.innerHTML = "FAIL"
@@ -166,13 +169,9 @@ function failedAttempt() {
   if (strictOn.checked == true) {
       strictPlay();
       } else {
-    setTimeout(function() { compPlay();}, 1800);
+    setTimeout(function() { compPlay();}, 1500);
   }
 }
-
-
-
-
 
 
 // sound created with each quad pad press
