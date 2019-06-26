@@ -5,22 +5,23 @@
   <meta charset="UTF-8">
   <title>Simon Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Load background fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
 
-  <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
+<!--Load Jasmine Framework -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine-html.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/boot.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.css">
 
-  <audio id="audio1">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
-  </audio>
-  <audio id="audio2">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
-  </audio>
-  <audio id="audio3">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
-  </audio>
-  <audio id="audio4">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
-  </audio>
+
+ <!-- Load Scripts -->
+ <script type="text/javascript" src="js/game.js"></script>
+
+ <!-- Load Tests -->
+ <script type="text/javascript" src="spec/gameSpec.js"></script>
+
 </head>
 
 <body>
@@ -47,7 +48,6 @@
     </div>
   </div>
 
-  <script  src="js/script.js"></script>
 
 </body>
 </html>
