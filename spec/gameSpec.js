@@ -2,7 +2,7 @@
 
 describe("getAttributes", function(){
   it("returns a defined value", function(){
-    let attributes = getAttributes(1)
+    let attributes = getAttributes()
     expect(attributes).toBeDefined()
   })
 
