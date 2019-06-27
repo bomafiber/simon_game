@@ -12,6 +12,8 @@ let intervalId;
 let goodPlay
 let compTurn;
 let startGame = false;
+let random;
+let getattributes;
 
 
 const countTurn = document.querySelector("#playerturn");
@@ -110,7 +112,7 @@ function getAttributes(num){
 
 function randomNumber(){
   return Math.floor(Math.random() * 4) + 1
-}
+};
 
 // Computer play function when to start game.
 function compPlay() {
@@ -121,7 +123,7 @@ function compPlay() {
 
   if(compSeq.length < round) {
     compSeq.push(randomNumber());
-  }
+  };
 
 // Generate a set of random button presses
   for (let i = 0; i < compSeq.length; i++) {
