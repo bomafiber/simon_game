@@ -107,6 +107,10 @@ function getAttributes(num){
   }
 }
 
+function randomNumber(){
+  return Math.floor(Math.random() * 4) + 1
+}
+
 // Computer play function when to start game.
 function compPlay() {
   startButton.disabled = true;
@@ -115,7 +119,7 @@ function compPlay() {
   winTheGame = false;
 
   if(compSeq.length < round) {
-    compSeq.push(Math.floor(Math.random() * 4) + 1);
+    compSeq.push(randomNumber());
   }
 
 // Generate a set of random button presses
