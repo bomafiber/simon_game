@@ -83,7 +83,7 @@ function click(num){
   }, 800)
 }
 
-function getAttributes(num){
+export function getAttributes(num){
   switch (num) {
     case 1:
       return [audio1, greenquadrant, "greenlite"]
