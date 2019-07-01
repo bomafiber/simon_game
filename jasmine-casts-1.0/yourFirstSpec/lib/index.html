@@ -18,5 +18,32 @@
   });
 </script>
 </head>
+<body>
 
+  <div id="outer-circle">
+    <div id="greenquad"></div>
+    <div id="redquad"></div>
+    <div id="yellowquad"></div>
+    <div id="bluequad"></div>
+    <div id="inner-circle">
+      <div id="title" class="font-effect-emboss">SIMON GAME</div>
+      <div id="switches">
+        <input type="checkbox" class="toggle" id="power">
+        <button class="button" id="start" disabled>Start</button>
+        <input type="checkbox" class="toggle" id="strict" disabled>
+      </div>
+      <div class="text1">
+        <span>POWER</span><span>STRICT</span>
+      </div>
+      <div id="playerturn"></div>
+      <div class="text2">
+        COUNT
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Scripts -->
+  <script type="text/javascript" src="testing/scripts/game.js"></script>
+
+</body>
 </html>
