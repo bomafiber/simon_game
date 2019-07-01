@@ -4,7 +4,7 @@ describe('getAttributes should return a defined value',function(){
    var getattributes = function getAttributes(){
      return getattributes;
    }
-   expect(getattributes).toBeDefined();
+     expect(getattributes).toBeDefined();
  });
 });
 
@@ -16,6 +16,7 @@ describe("random Number should with limits",function(){
       return random
     };
     expect(random).not.toBeGreaterThan(4)
+    expect(random >= 30).toBeTruthy() // Negative tests
     expect(random).not.toBeLessThan(1)
   });
 });
