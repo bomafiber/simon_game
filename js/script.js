@@ -1,16 +1,16 @@
-// Global variables
+// GLobal variables.
 
 let userSeq = [];
 let compSeq = [];
-let strictMode = false;
+// let strictMode = false;
 let powerSelection = false;
 let sound = false;
 let winTheGame;
-let loseTheGame;
+let loseTheGame; // not in use
 let round = 1;
 let intervalId;
 let goodPlay
-let compTurn;
+let compTurn; // not in use
 let startGame = false;
 
 
@@ -45,23 +45,22 @@ powerOn.addEventListener('click', (event) => {
 
 // Click the start button to start the game
 startButton.addEventListener('click', (event) => {
-  if (powerSelection == true) {
+  if (powerSelection === true) {
     playNewGame();
-    }
+  }
 });
 
 
 // Enable strict button to start strict mode.
-strictOn.addEventListener('click',(event) => {
-  if(strictOn.disabled = false){
-    strictPlay();
-  }
-});
+// strictOn.addEventListener('click',(event) => {
+//   strictOn.checked ? strictMode = true : strictMode = false
+// });
 
 // Strict play button enabled feature
-function strictPlay(){
+function enforceStrict(){
   round = 1
   compSeq.length = 0;
+  // compSeq = []
   setTimeout(function() { compPlay();}, 1800);
 }
 
@@ -75,7 +74,7 @@ function playNewGame () {
   userSeq = [];
   sound = true;
   intervalId = 0;
-  playTurn = 1;
+  playTurn = 1; // not in use
   countTurn.innerHTML = 1;
   goodPlay = true;
   startGame = true;
@@ -106,6 +105,7 @@ function getAttributes(num){
       return [audio4, yellowquadrant, "yellowlite"]
   }
 }
+
 
 function randomNumber(){
   return Math.floor(Math.random() * 4) + 1
@@ -138,16 +138,15 @@ function userPlay(quads) {
 
   if (userTurn < round) {
 
-    if (compSeq[userTurn] == quads && round == 20) {
-      countTurn.innerHTML == "WIN"
-
+    if (compSeq[userTurn] === quads && round === maxRound) {
+      countTurn.innerHTML = "WIN"
     }
     userSeq.push(quads);
   }
    var userResult = true;
-   if(userSeq.length == round) {
+   if(userSeq.length === round) {
      for (var i = 0; i < round ; i++) {
-       if (userSeq[i] != compSeq[i]){
+       if (userSeq[i] !== compSeq[i]){
          userResult = false;
          failedAttempt();
        }
@@ -170,8 +169,8 @@ function failedAttempt() {
   userSeq = [];
 
 // Failed playerturn with Strict play button enabled
-  if (strictOn.checked == true) {
-      strictPlay();
+  if (strictOn.checked) {
+      enforceStrict();
       } else {
     setTimeout(function() { compPlay();}, 1500);
   }
