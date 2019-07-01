@@ -16,7 +16,7 @@ describe("random Number should with limits",function(){
       return random
     };
     expect(random).not.toBeGreaterThan(4)
-    expect(random >= 30).toBeTruthy() // Negative tests
+    expect(random >= 20).toBeFalsy() // use ".toBeTruthy" for negative test
     expect(random).not.toBeLessThan(1)
   });
 });
