@@ -11,6 +11,7 @@ body {
   border-radius: 50% !important;
   font-size: 1.5em;
   background-color: lightgray;
+  cursor: pointer;
 }
 
 #switches {
@@ -90,6 +91,11 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+}
+
+.greenlite{
+  background: lightgreen !important;
 }
 
 #redquad {
@@ -110,6 +116,10 @@ body {
   -webkit-box-sizing: border-box;
 }
 
+.redlite {
+  background: tomato !important;
+}
+
 #yellowquad {
   position: absolute;
   height: 250px;
@@ -128,6 +138,10 @@ body {
   -webkit-box-sizing: border-box;
 }
 
+.yellowlite {
+  background:#fff099 !important;
+}
+
 #bluequad {
   position: absolute;
   height: 250px;
@@ -144,6 +158,10 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.bluelite {
+  background: lightblue !important;
 }
 
 #inner-circle {
