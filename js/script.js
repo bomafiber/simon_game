@@ -45,7 +45,6 @@ startButton.addEventListener('click', (event) => {
   };
 });
 
-
 // Strict play button enabled feature
 function enforceStrict() {
   round = 1;
@@ -117,7 +116,6 @@ function compPlay() {
   };
 };
 
-
 // User play function
 function userPlay(quads) {
   var userTurn = userSeq.length
@@ -149,7 +147,6 @@ function userPlay(quads) {
   }
 };
 
-
 // Function to notify user when wrong sequence entered
 function failedAttempt() {
   countTurn.innerHTML = "FAIL";
@@ -164,7 +161,6 @@ function failedAttempt() {
     }, 1500);
   }
 };
-
 
 // sound created with each quad pad press
 var errorSound = new Audio();
