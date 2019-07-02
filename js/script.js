@@ -7,7 +7,7 @@ let sound = false;
 let winTheGame;
 let round = 1;
 let intervalId;
-let goodPlay;
+// let goodPlay;
 let startGame = false;
 
 
@@ -64,7 +64,7 @@ function playNewGame() {
   intervalId = 0;
   playTurn = 1; // not in use
   countTurn.innerHTML = 1;
-  goodPlay = true;
+  // goodPlay = true;
   startGame = true;
   compPlay();
 };
