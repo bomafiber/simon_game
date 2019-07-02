@@ -62,9 +62,8 @@ function playNewGame() {
   userSeq = [];
   sound = true;
   intervalId = 0;
-  playTurn = 1; // not in use
+  playTurn = 1;
   countTurn.innerHTML = 1;
-  // goodPlay = true;
   startGame = true;
   compPlay();
 };
