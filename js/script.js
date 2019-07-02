@@ -7,7 +7,6 @@ let sound = false;
 let winTheGame;
 let round = 1;
 let intervalId;
-// let goodPlay;
 let startGame = false;
 
 
@@ -20,8 +19,9 @@ const redquadrant = document.querySelector("#redquad");
 const bluequadrant = document.querySelector("#bluequad");
 const yellowquadrant = document.querySelector("#yellowquad");
 const maxRound = 20;
-// Click the power button to activate the game
 
+
+// Click the power button to activate the game
 powerOn.addEventListener('click', (event) => {
   if (powerOn.checked === true) {
     powerSelection = true;
