@@ -14,7 +14,7 @@ These steps below will get you a copy of the project up and running on your loca
 
 2. Open the index.html file in any browser to launch the game.
 
-3. Enable the **power** checkbox and then select either **strict** checkbox to play the game in strict mode or leave unchecked to play in normal mode.
+3. Enable the **power** checkbox and then select the **strict** checkbox to play the game in strict mode or leave unchecked to play in normal mode.
 
 3. Click the **Start** button to begin play.
 
@@ -59,7 +59,6 @@ For this project I conducted the following types of testing:
  The application was tested on following browsers(Firefox, Chrome and Internet Explorer). The application was also viewed and tested on  mobile devices.
 
 
-
 ### Automated Testing  
 
 I used the Jasmine BDD framework for automated testing.
@@ -69,7 +68,15 @@ I used the Jasmine BDD framework for automated testing.
  2. Link your source file and spec files in the head of the **specRunner.html** file and then launch the **specRunner.html** in a browser.
 
 
-### Break down into end to end tests
+### User stories used to build the application
+
+>**User Story:** I am presented with a random series of button presses.<br>
+>**User Story:** Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.<br>
+>**User Story:** I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.<br>
+>**User Story:** If I enter the wrong button sequence, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.<br>
+>**User Story:** I can see how many steps are in the current series of button presses.<br>
+>**User Story:** I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts from round 1 at a new random series of button presses.<br>
+>**User Story:** I can win the game by getting a series of 20 steps correct and I am notified of my victory.<br>
 
 Explain what these tests test and why
 
@@ -91,9 +98,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used to enable interaction with the application via the browser.
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Used to markup / build the application framework.
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Used to style the frontend
 
 ## Contributing
 
