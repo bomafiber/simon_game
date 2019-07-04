@@ -1,16 +1,23 @@
 # Simon Game Project
 
-Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison, working for toy design firm Marvin Glass and Associates, with software programming by Lenny Cope. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over.
+Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison.
+The game creates a series of tones and lights and requires a user/player to repeat the sequence.
+If the user succeeds, the series becomes progressively longer and more complex. In normal mode the user repeats the round if the sequence is wrong. In strict mode the user starts from round 1 when the sequence is wrong. The game is over when the user completes 20 rounds.
 
 ## Getting Started
 
 The project is hosted on Github pages https://bomafiber.github.io/simon_game/ and can be cloned via url https://github.com/bomafiber/simon_game.git
 
-These steps below will get you a copy of the project up and running on your local machine for development and testing purposes.
+These steps below will get you a copy of the project up and running on your local machine.
 
 1. Firstly, clone the repository by running the ```git clone https://github.com/bomafiber/simon_game.git``` command from a terminal.
-2. You will also need Node and npm installed on the machine. npm is automatically installed with node. You can get npm by installing Node from (https://nodejs.org/en/)
-3. Install Jasmine 
+
+2. Open the index.html file in any browser to launch the game.
+
+3. Enable the **power** checkbox and then select either **strict** checkbox to play the game in strict mode or leave unchecked to play in normal mode.
+
+3. Click the **Start** button to begin play.
+
 
 ### Prerequisites
 
@@ -40,7 +47,25 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+
+### Manual Testing
+
+For this project I conducted the following types of testing:
+
+* Functional testing
+* Usability testing
+* Cross browser testing
+
+ The application was tested on following browsers(Firefox, Chrome and Internet Explorer). The application was also viewed and tested on  mobile devices.
+
+ I used the Jasmine BDD framework for automated testing.
+
+### Automated Testing  
+
+ 1. Download the jasmine standalone distribution from Github https://github.com/jasmine/jasmine/releases and extract the folders to your local machine. I used version 2.99.1 for my project. It had a few vulnerabilities but it worked for this purpose.
+
+ 2. Link your source file and spec files in the head of the **specRunner.html** file and then launch the **specRunner.html** in a browser.
+
 
 ### Break down into end to end tests
 
