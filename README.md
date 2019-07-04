@@ -58,9 +58,11 @@ For this project I conducted the following types of testing:
 
  The application was tested on following browsers(Firefox, Chrome and Internet Explorer). The application was also viewed and tested on  mobile devices.
 
- I used the Jasmine BDD framework for automated testing.
+
 
 ### Automated Testing  
+
+I used the Jasmine BDD framework for automated testing.
 
  1. Download the jasmine standalone distribution from Github https://github.com/jasmine/jasmine/releases and extract the folders to your local machine. I used version 2.99.1 for my project. It had a few vulnerabilities but it worked for this purpose.
 
