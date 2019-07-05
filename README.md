@@ -43,7 +43,7 @@ For this project I conducted the following types of testing:
 
 I used the Jasmine BDD framework for automated testing.
 
- 1. Download the jasmine standalone distribution from Github https://github.com/jasmine/jasmine/releases and extract the folders to your local machine. I used version 2.99.1 for my project. It had a few vulnerabilities but it worked for this purpose.
+ 1. I committed the jasmine standalone distribution from **Github** https://github.com/jasmine/jasmine/releases with the project. I used version 2.99.1 for the project. It had a few vulnerabilities but it worked for this purpose.
 
  2. Link your source file and spec files in the head of the **specRunner.html** file and then launch the **specRunner.html** in a browser.
 
@@ -71,18 +71,19 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 I used **Git** and **Github** for versioning (https://github.com) .
 
-## Authors
+## Resource
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+ **Marjin Haverbeke** - *Eloquent JavaScript*
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Contributors
+
+**Ignatius Ukwuoma**
+**Gonzalo Girasol**
+**Sam Jenkins**
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+**Ignatius Ukwuoma**
