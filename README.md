@@ -37,11 +37,11 @@ For this project I conducted the following types of testing:
 * Usability testing
 * Cross browser testing
 
- The application was tested on following browsers(Firefox, Chrome and Internet Explorer). The application was also viewed and tested on  mobile devices.
+ The application was tested on Firefox, Chrome and the Internet Explorer browser. The application was also viewed and tested on mobile devices.
 
 ### Automated Testing  
 
-I used the Jasmine BDD framework for automated testing.
+I used the Jasmine BDD framework for automated unit testing.
 
  1. I committed the jasmine standalone distribution from **Github** https://github.com/jasmine/jasmine/releases with the project. I used version 2.99.1 for the project. It had a few vulnerabilities but it worked for this purpose.
 
@@ -62,27 +62,18 @@ I used the Jasmine BDD framework for automated testing.
 
  3. Click the **Start** button to begin play.
 
-
-## Credits
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
-
 I used **Git** and **Github** for versioning (https://github.com) .
 
 ## Resource
-
  **Marjin Haverbeke** - *Eloquent JavaScript*
 
 ## Contributors
-
 **Ignatius Ukwuoma**
 **Gonzalo Girasol**
 **Sam Jenkins**
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
