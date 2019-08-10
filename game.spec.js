@@ -18,5 +18,8 @@ describe("random Number should with limits",function(){
     expect(random).not.toBeGreaterThan(4)
     expect(random >= 20).toBeFalsy() // use ".toBeTruthy" for negative test
     expect(random).not.toBeLessThan(1)
+    expect(random).not.toBeNull();
   });
 });
+
+describe("")
