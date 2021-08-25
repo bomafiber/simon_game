@@ -69,9 +69,9 @@ I used **Git** and **Github** for versioning (https://github.com) .
  **Marjin Haverbeke** - *Eloquent JavaScript*
 
 ## Contributors
-**Ignatius Ukwuoma**<br/>
-**Gonzalo Girasol**<br/>
-**Sam Jenkins**
+* **Ignatius Ukwuoma**<br/>
+* **Gonzalo Girasol**<br/>
+* **Sam Jenkins**
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
