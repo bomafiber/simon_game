@@ -69,8 +69,8 @@ I used **Git** and **Github** for versioning (https://github.com) .
  **Marjin Haverbeke** - *Eloquent JavaScript*
 
 ## Contributors
-**Ignatius Ukwuoma**
-**Gonzalo Girasol**
+**Ignatius Ukwuoma**<br/>
+**Gonzalo Girasol**<br/>
 **Sam Jenkins**
 
 ## License
